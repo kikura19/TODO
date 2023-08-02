@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オールインワンTODO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>オールインワンTODO</h1>
+        </div>
+
+        <div class="header-right">
+            <!--今日の日付-->
+            <span id="date"></span>
+        </div>  
+  
+    </header>
+
+    <div class="setting-lists">
+        <!--画面飛ぶようにする aでhrefかな-->
+        <div class="home green" id="tohome">
+            <p>HOME</p>
+        </div>
+        <div class="setting white" id="tosetting">
+            <p>設定</p>
+        </div>
+    </div>
+
+    <div class ="" id="home">
+        <div class="today-infos">
+            <div class="today-weather">
+                <h3>今日の天気</h3>
+                <span id="weather"></span>
+            </div>
+            <div class="time-getup">
+                <h3>翌日の起床</h3>
+                <span id="wakeup" class="time"></span>
+            </div>
+            <div class="time-train">
+                <h3>電車時間</h3>
+                <span id="tomorrow-train-time" class="time"></span>
+            </div>
+        </div>
+        
+        <div class="todos">
+            <h1 class="content">タスク管理</h1>
+            <form id="form" class="">
+                <input class="textbox" type="text" id="input" placeholder="TODOを入力" autocomplete="off">
+                <input class="deadline" type="text" id="deadlineInput" placeholder="締切日" autocomplete="off">
+                <a class="bt-todo" id="register">登録</a>       
+            </form>
+            <div class="content-box">
+                <h2 class="task-title">未完了</h2>
+                <ul class=""  id="ultodo"></ul>
+                <!-- liはJavaScriptで作成するからここにはない -->
+            </div>
+            <div class="content-box">
+                <h2 class="task-title">完了済</h2>
+                <ul class="" id="uldone">
+                </ul>
+            </div>
+            <div class="content-box">
+                <h2 class="task-title">待機中</h2>
+                <ul class="" id="ulcoming">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="none" id="setting">
+        
+        <div class="commuter-train">
+            <p><h2>電車時間入力</h2></p>
+            <p>月曜日<input type="time" id="mond"></p> 
+            <p>火曜日<input type="time" id="tues"></p> 
+            <p>水曜日<input type="time" id="wedn"></p> 
+            <p>木曜日<input type="time" id="thur"></p> 
+            <p>金曜日<input type="time" id="frid"></p> 
+            <p>土曜日<input type="time" id="satu"></p> 
+            <p>日曜日<input type="time" id="sund"></p> 
+            
+        </div>
+        <div class="submit">
+            <a class="bt-todo regist" id="registerTime">登録</a> 
+        </div>
+       
+        <div class="alarm">
+            <p><h2>起床時間の入力</h2></p>
+            <p>月曜日<input type="time" id="mon"></p> 
+            <p>火曜日<input type="time" id="tue"></p> 
+            <p>水曜日<input type="time" id="wed"></p> 
+            <p>木曜日<input type="time" id="thu"></p> 
+            <p>金曜日<input type="time" id="fri"></p> 
+            <p>土曜日<input type="time" id="sat"></p> 
+            <p>日曜日<input type="time" id="sun"></p> 
+        </div>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="todo.js"></script>
+    <script src="date.js"></script>
+    <script src="weather.js"></script>
+    <script src="wakeup.js"></script>
+    <script src="change.js"></script>
+    <script src="train.js"></script>
+</body>
+</html>

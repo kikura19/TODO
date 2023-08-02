@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+body {
+    background-color: honeydew;
+    font-family: "メイリオ";
+}
+.none{
+  display: none;
+}
+
+.green{
+  background: lightgreen;
+}
+
+.white{
+  background: white;
+}
+
+.header-right{
+  text-align: right;
+}
+
+today-infos{
+  position: fixed;
+  top: 70;
+  right: 50;
+  bottom: 500;
+  left: 200;
+  
+}
+.setting-lists{
+  margin-top: 80px;
+  display: flex;
+  flex-flow: column;
+  justify-content:center;
+}
+
+.setting-lists p{
+  font-size: 18px;
+  font-weight: bold;
+  margin:auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+  margin: 20px;
+  border: 1px solid #000;
+  width: 150px;
+  height: 70px;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+  margin: 20px;
+  border: 1px solid #000;
+  width: 150px;
+  height: 70px;
+}
+
+
+.today-infos{
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+}
+
+.today-infos h3{
+    font-size:30px;
+    background-color: lightgreen;
+    height:45px;
+    text-align: center;
+}
+
+.today-infos span{
+    width:80%;
+    color:#000;
+    align-items: center;    
+
+}
+
+.today-weather {
+  position:absolute;
+  padding: 10px 20px;
+  left: 200px;
+  top: 160px;
+  color: #fff;
+  width: 400px;
+  height: 280px;
+  background-color: #fff; 
+ }
+
+ .temp{
+    float:right;
+    padding-right:30px;
+ }
+
+ .today-weather img{
+    padding-left:30px;
+    height:100px;
+    width:auto;
+ }
+
+ .tempfont{
+    font-weight: bold;
+
+ }
+ .templow{
+    font-weight: bold; 
+    color:#0000FF;
+ }
+
+ .temphigh{
+    font-weight: bold;
+    color:#FF0000;
+
+ }
+
+ .time{
+  font-size:60px;;
+  position: relative;
+  top:40px;
+ }
+
+ .time-getup {
+  position:absolute;
+  padding: 10px 20px;
+  left: 700px;
+  top: 160px;
+  color: #fff;
+  width: 200px;
+  height: 280px;
+  background-color: #fff;
+  text-align: center;
+ }
+
+ .time-train {
+  position:absolute;
+  padding: 10px 20px;
+  left: 1000px;
+  top: 160px;
+  color: #fff;
+  width: 200px;
+  height: 280px;
+  background-color: #fff;
+  text-align: center;
+  }
+
+
+
+
+
+.content-box{
+    margin-bottom: 1em;
+    background: #fcfcfc;
+    border: solid 2px rgba(128, 128, 128, 0.397);
+}
+
+.content-box h2{
+    margin-top: 0.2em;
+    margin-left: 0.3em;
+}
+
+.todos{
+    margin-top:130px;
+
+}
+
+ul {
+    background: #fcfcfc;
+    padding: 0em 1em 0.2em 1em;
+    width: auto;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+ul li{
+    color: #404040;
+    border-left: solid 6px #1fa67a;/*左側の線*/
+    border-bottom: solid 2px #dadada;/*下に灰色線*/
+    background: whitesmoke;
+    margin-bottom: 5px;/*下のバーとの余白*/
+    line-height: 1.5;
+    padding: 0.5em;
+    align-items: center;
+    list-style-type: none!important;/*ポチ消す*/
+    font-weight: bold;
+  }
+
+.bt-todo {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 0.8;
+    position: relative;
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    color: #000;
+    background-color: #18e022;
+    border-bottom: 4px solid #0d7503;
+}
+
+
+
+.bt-todo:hover {
+    margin-top: 3px;
+    color: #000;
+    background: #fff20a;
+    border-bottom: 1px solid #0d7503;
+}
+
+.textbox{
+  font-size: 19px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 4px;
+  position: relative;
+  width: 50%;
+  color: #666;
+  user-select:none;
+  margin-bottom: 30px;
+}
+
+.deadline{
+  font-size: 19px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 4px;
+  position: relative;
+  width: 100px;
+  color: #666;
+  user-select:none;
+  margin-bottom: 30px;
+}
+
+.commuter-train{
+  position:absolute;
+  padding: 10px 20px;
+  left: 800px;
+  top: 160px;
+  width: 200px;
+  height: 280px;
+}
+.alarm {
+  position:absolute;
+  padding: 10px 20px;
+  left: 400px;
+  top: 160px;
+  width: 200px;
+  height: 280px;
+ }
+.submit {
+  position:absolute;
+  padding: 10px 20px;
+  left: 640px;
+  top: 600px;
+  width: 200px;
+  height: 280px;
+ }
