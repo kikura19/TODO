@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
 
-
 *{
   box-sizing: border-box;
 }
@@ -11,6 +10,8 @@ body{
   font-family: 'Noto Serif JP', sans-serif;
 }
 
+
+/* ヘッダー部分 */
 header {
   width: 100%;
   padding: 13px 3.5% 10px;
@@ -21,8 +22,6 @@ header {
   align-items: center;
   color: #ffffff;
 }
-
-
 header h1{
   margin: 0;
   padding: 0;
@@ -50,124 +49,97 @@ header nav{
 }
 
 
-today-infos{
-  position: fixed;
-  top: 70;
-  right: 50;
-  bottom: 500;
-  left: 200;
-  
-}
+/* 通常画面 */
 
-.home {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  
-  margin: 20px;
-  border: 1px solid #000;
-  width: 150px;
-  height: 70px;
-}
-
-.setting {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  
-  margin: 20px;
-  border: 1px solid #000;
-  width: 150px;
-  height: 70px;
-}
-
-
+/* ：今日の時間関係 */
 .today-infos{
-    display: flex;
-    justify-content: center;
-    vertical-align: top;
+  display: flex;
+  margin: 50px auto 40px;
+  width: 90%;
+  align-items: center;
 }
 
-.today-infos h3{
-    font-size:30px;
-    background-color: lightgreen;
-    height:45px;
-    text-align: center;
+.info{
+  margin: auto;
+
 }
 
-.today-infos span{
-    width:80%;
-    color:#000;
-    align-items: center;    
+.info h3{
+  font-size:30px;
+  background-color: lightgreen;
+  height:45px;
+  text-align: center;
+}
+
+.info span{
+  width:80%;
+  color:#000;
+  align-items: center;    
 
 }
 
 .today-weather {
-  position:absolute;
+padding: 10px 20px;
+color: #fff;
+width: 400px;
+height: 280px;
+background-color: #fff; 
+}
+
+.time-getup {
   padding: 10px 20px;
-  left: 200px;
-  top: 160px;
-  color: #fff;
-  width: 400px;
-  height: 280px;
-  background-color: #fff; 
- }
-
- .temp{
-    float:right;
-    padding-right:30px;
- }
-
- .today-weather img{
-    padding-left:30px;
-    height:100px;
-    width:auto;
- }
-
- .tempfont{
-    font-weight: bold;
-
- }
- .templow{
-    font-weight: bold; 
-    color:#0000FF;
- }
-
- .temphigh{
-    font-weight: bold;
-    color:#FF0000;
-
- }
-
- .time{
-  font-size:60px;;
-  position: relative;
-  top:40px;
- }
-
- .time-getup {
-  position:absolute;
-  padding: 10px 20px;
-  left: 700px;
-  top: 160px;
-  color: #fff;
-  width: 200px;
-  height: 280px;
-  background-color: #fff;
-  text-align: center;
- }
-
- .time-train {
-  position:absolute;
-  padding: 10px 20px;
-  left: 1000px;
-  top: 160px;
   color: #fff;
   width: 200px;
   height: 280px;
   background-color: #fff;
   text-align: center;
   }
+  
+.time-train {
+  padding: 10px 20px;
+  color: #fff;
+  width: 200px;
+  height: 280px;
+  background-color: #fff;
+  text-align: center;
+  }
+
+.temp{
+  float:right;
+  padding-right:30px;
+}
+
+.today-weather img{
+  padding-left:30px;
+  height:100px;
+  width:auto;
+}
+
+.tempfont{
+  font-weight: bold;
+
+}
+.templow{
+  font-weight: bold; 
+  color:#0000FF;
+}
+
+.temphigh{
+  font-weight: bold;
+  color:#FF0000;
+
+}
+
+.time{
+font-size:60px;;
+position: relative;
+top:40px;
+}
+
+
+
+
+
 
 
 
@@ -268,6 +240,19 @@ today-infos{
   user-select:none;
   margin-bottom: 30px;
 }
+
+/* 設定画面 */
+.setting {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+  margin: 20px;
+  border: 1px solid #000;
+  width: 150px;
+  height: 70px;
+}
+
 
 .commuter-train{
   position:absolute;
