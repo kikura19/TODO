@@ -16,7 +16,19 @@ function getWeatherData() {
     'Thunderstorm': 'https://sakutto-sozai.com/wp-content/uploads/2021/08/thunderstorm_001_thumb.jpg',
     'Snow': 'https://illust8.com/wp-content/uploads/2018/08/weather_snow_yukidaruma_illsut_1089.png',
     'Mist': 'https://3.bp.blogspot.com/-cxYF1nh7jgQ/WOdEAeCvVEI/AAAAAAABDng/JSPTXndnhJEL5qh67Zq5N9Tz12X6svdMQCLcB/s400/yama_kiri.png',
-  };    
+  };  
+  
+  const weatherName = {
+    'Clear': '快晴',
+    'Partly cloudy': '晴れ',
+    'Cloudy': 'くもり',
+    'Overcast': '曇り',
+    'Rain': '雨',
+    'Showers': 'にわか雨',
+    'Thunderstorm': '雷雨',
+    'Snow': '雪',
+    'Mist': '霧'
+  }
 
 
     
@@ -31,12 +43,13 @@ function getWeatherData() {
         const maxTemp = forecast.day.maxtemp_c;
 
         let weatherIconUrl = weatherImages[currentWeather];
+        let weatherToday = weatherName[currentWeather];
         
 
 
   
         weatherDiv.innerHTML = `
-          <h2> ${currentWeather}</h2>
+          <h2> ${weatherToday}</h2>
           <img src="${weatherIconUrl}" alt="Weather Icon" class= "weather-icon">
           <div class="temp">
             <p>気温: <span class = "tempfont">${currentTemp}℃</span></p>
