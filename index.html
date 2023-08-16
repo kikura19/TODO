@@ -11,49 +11,32 @@
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <h1>オールインワンTODO</h1>
-        </div>
-
-        <div class="header-right">
-            <!--今日の日付-->
-            <span id="date"></span>
-        </div>  
-  
+        <h1>
+            <a href="/">大学生のためのTODOリスト</a>
+        </h1>    
+        <nav class="nav-right">
+            <ul>
+                <li><a herf="#" id="tosetting">SETTING</a></li>
+                <li><span id="date"></span></li>
+            </ul>           
+        </nav>
     </header>
 
-    <div class="setting-lists">
-        <!--画面飛ぶようにする aでhrefかな-->
-        <div class="home green" id="tohome">
-            <p>HOME</p>
-        </div>
-        <div class="setting white" id="tosetting">
-            <p>設定</p>
-        </div>
-    </div>
-
     <div class ="" id="home">
-        <div class="today-infos">
-            <div class="today-weather">
-                <h3>今日の天気</h3>
-                <span id="weather"></span>
-            </div>
-            <div class="time-getup">
-                <h3>翌日の起床</h3>
-                <span id="wakeup" class="time"></span>
-            </div>
-            <div class="time-train">
-                <h3>電車時間</h3>
-                <span id="tomorrow-train-time" class="time"></span>
-            </div>
+        <div class="infos">
+            <ul>
+                <li>[今日の天気] <span id="weather"></span></li>
+                <li>[翌日の起床] <span id="wakeup"></span></li>
+                <li>[翌日の電車] <span id="train"></span></li>              
+            </ul>
         </div>
-        
+
         <div class="todos">
             <h1 class="content">タスク管理</h1>
-            <form id="form" class="">
+            <form id="form" class="input-box">
                 <input class="textbox" type="text" id="input" placeholder="TODOを入力" autocomplete="off">
                 <input class="deadline" type="text" id="deadlineInput" placeholder="締切日" autocomplete="off">
-                <a class="bt-todo" id="register">登録</a>       
+                <a class="bt-todo register" id="register">登録</a>       
             </form>
             <div class="content-box">
                 <h2 class="task-title">未完了</h2>
@@ -72,42 +55,48 @@
             </div>
         </div>
     </div>
-    <div class="none" id="setting">
-        
-        <div class="commuter-train">
-            <p><h2>電車時間入力</h2></p>
-            <p>月曜日<input type="time" id="mond"></p> 
-            <p>火曜日<input type="time" id="tues"></p> 
-            <p>水曜日<input type="time" id="wedn"></p> 
-            <p>木曜日<input type="time" id="thur"></p> 
-            <p>金曜日<input type="time" id="frid"></p> 
-            <p>土曜日<input type="time" id="satu"></p> 
-            <p>日曜日<input type="time" id="sund"></p> 
+    <div class="none" id="setting"> 
+        <div class="settings">
+            <div class="time-setting">
+                <div class="times">
+                    <p><h2>起床時間</h2></p>
+                    <p>月曜日<input type="time" id="mon"></p> 
+                    <p>火曜日<input type="time" id="tue"></p> 
+                    <p>水曜日<input type="time" id="wed"></p> 
+                    <p>木曜日<input type="time" id="thu"></p> 
+                    <p>金曜日<input type="time" id="fri"></p> 
+                    <p>土曜日<input type="time" id="sat"></p> 
+                    <p>日曜日<input type="time" id="sun"></p> 
+                </div>
+                
+                <div class="times">
+                    <p><h2>電車時間</h2></p>
+                    <p>月曜日<input type="time" id="mond"></p> 
+                    <p>火曜日<input type="time" id="tues"></p> 
+                    <p>水曜日<input type="time" id="wedn"></p> 
+                    <p>木曜日<input type="time" id="thur"></p> 
+                    <p>金曜日<input type="time" id="frid"></p> 
+                    <p>土曜日<input type="time" id="satu"></p> 
+                    <p>日曜日<input type="time" id="sund"></p>             
+                </div> 
+            </div>     
             
-        </div>
-        <div class="submit">
-            <a class="bt-todo regist" id="registerTime">登録</a> 
-            <p id="alert" class="hidden">時刻が更新されました！</p>
-        </div>
-       
-        <div class="alarm">
-            <p><h2>起床時間の入力</h2></p>
-            <p>月曜日<input type="time" id="mon"></p> 
-            <p>火曜日<input type="time" id="tue"></p> 
-            <p>水曜日<input type="time" id="wed"></p> 
-            <p>木曜日<input type="time" id="thu"></p> 
-            <p>金曜日<input type="time" id="fri"></p> 
-            <p>土曜日<input type="time" id="sat"></p> 
-            <p>日曜日<input type="time" id="sun"></p> 
+            <div class="submit">
+                <a class="bt-todo" id="registerTime">登録</a> 
+                <p id="alert" class="none">時刻が更新されました！</p>
+            </div>
         </div>
     
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="JavaScript/todo.js"></script>
-    <script src="JavaScript/date.js"></script>
-    <script src="JavaScript/weather.js"></script>
-    <script src="JavaScript/wakeup.js"></script>
-    <script src="JavaScript/change.js"></script>
-    <script src="JavaScript/train.js"></script>
+    
+    <div><!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="JavaScript/todo.js"></script>
+        <script src="JavaScript/date.js"></script>
+        <script src="JavaScript/weather.js"></script>
+        <script src="JavaScript/wakeup.js"></script>
+        <script src="JavaScript/change.js"></script>
+        <script src="JavaScript/train.js"></script>
+    </div>
 </body>
 </html>

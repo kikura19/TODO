@@ -25,13 +25,13 @@ sun.value = wtimes.sun;
 registerTime.addEventListener("click",function(){  
     wtimes = {};
     TimeSaving();  
-    alert.classList.remove('hidden');
+    alert.classList.remove('none');
     alert.classList.add('popup-message');
 });
 
 alert.addEventListener('animationend',()=>{
     alert.classList.remove('popup-message');
-    alert.classList.add('hidden');
+    alert.classList.add('none');
 })
 
 function TimeSaving(){   
@@ -59,13 +59,11 @@ function displayWakeup(){
     if (wtimes && wtimes[DayOfWeekString]){
         const wakeTime = wtimes[DayOfWeekString];
         wakeup.textContent = `${wakeTime}`;
-        document.getElementById('wakeup').style.fontSize = '60px';
     }else{
-        const wakeTime = '時刻が設定されていません';
+        const wakeTime = '未設定';
         
         wakeup.textContent = `${wakeTime}`;
-        document.getElementById('wakeup').style.fontSize = '16px';
-    }
+     }
     
     // 時刻を表示します
 
