@@ -6,7 +6,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: honeydew;
+  background-color: rgb(252, 250, 241);
   font-family: 'Noto Serif JP', sans-serif;
 }
 
@@ -48,22 +48,24 @@ header nav{
   display: none;
 }
 
-/* infos部分 */
+
+
+/* 通常画面 */
+/* :infos部分 */
 .infos{
   width: 100%;
   height: 50px;
   margin-top: 55px;
-  padding: auto 3.5%;
   background-color: #5a69b1;
   display: flex;
   align-items: center;
   color: #ffffff;
 }
-
 .infos ul{
   list-style: none;
   margin: 0;
   display: flex;
+  text-align: center;
 }
 .infos li{
   margin: 0 0 0 40px;
@@ -75,7 +77,6 @@ header nav{
 }
 
 
-/* 通常画面 */
 .content-box{
     margin-bottom: 1em;
     background: #fcfcfc;
@@ -102,14 +103,14 @@ header nav{
   
 .todos li{
     color: #404040;
-    border-left: solid 6px #1fa67a;/*左側の線*/
+    border-left: solid 6px #1b09bb;/*左側の線*/
     border-bottom: solid 2px #dadada;/*下に灰色線*/
     background: whitesmoke;
     margin-bottom: 5px;/*下のバーとの余白*/
     line-height: 1.5;
     padding: 0.5em;
     align-items: center;
-    list-style-type: none!important;/*ポチ消す*/
+    list-style-type: none;/*ポチ消す*/
     font-weight: bold;
   }
 
@@ -132,20 +133,17 @@ header nav{
     vertical-align: middle;
     text-decoration: none;
     letter-spacing: 0.1em;
-    color: #212529;
     border-radius: 0.5rem;
-    color: #000;
-    background-color: #18e022;
-    border-bottom: 4px solid #0d7503;
+    color: #f0f0f0;
+    background-color: #186fe0;
+    border-bottom: 4px solid #1b09bb;
 }
-
-
 
 .bt-todo:hover {
     margin-top: 3px;
-    color: #000;
-    background: #fff20a;
-    border-bottom: 1px solid #0d7503;
+    color: #f0f0f0;
+    background: #0aa5ff;
+    border-bottom: 1px solid #1b09bb;
 }
 
 .textbox{
@@ -173,61 +171,41 @@ header nav{
 }
 
 /* 設定画面 */
-.setting {
+.settings{
+  margin-top: 100px;
+}
+.time-setting{
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+}
+.times{ 
   text-align: center;
-  
-  margin: 20px;
-  border: 1px solid #000;
-  width: 150px;
-  height: 70px;
+  padding: 0 50px; 
+  width: auto; 
 }
-
-
-.commuter-train{
-  position:absolute;
-  padding: 10px 20px;
-  left: 800px;
-  top: 160px;
-  width: 200px;
-  height: 280px;
+.submit{
+  display: flex;
+  justify-content: center;
+  padding: 39px;
+  margin: 30px auto;
 }
-.alarm {
-  position:absolute;
-  padding: 10px 20px;
-  left: 400px;
-  top: 160px;
-  width: 200px;
-  height: 280px;
- }
-.submit {
-  position:absolute;
-  padding: 10px 20px;
-  left: 640px;
-  top: 600px;
-  width: 200px;
-  height: 280px;
-}
-
-
 #alert{
-  height: 72px;
-  padding: 8px 16px;
+  height: auto;
+  padding: 4px 16px;
   border-radius: 8px;
-  background: #78dd7888;
+  color: #ffffff;
+  background: #0e51e3a1;
   font-weight: bold;
   text-align: center;
   line-height: 72px;
   position: fixed;
-  right: 41%;
   bottom: 10%;
  }
-
  .popup-message {
   animation: popup 3s forwards;
 }
-
 @keyframes popup {
   0% {
     transform: translateY(15%);
