@@ -274,4 +274,41 @@ ul li{
   top: 600px;
   width: 200px;
   height: 280px;
+}
+
+.hidden{
+  display: none;
  }
+
+#alert{
+  height: 72px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #78dd7888;
+  font-weight: bold;
+  text-align: center;
+  line-height: 72px;
+  position: fixed;
+  right: 41%;
+  bottom: 10%;
+ }
+
+ .popup-message {
+  animation: popup 3s forwards;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  10%, 90% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}

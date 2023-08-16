@@ -8,6 +8,8 @@ const sun = document.getElementById("sun");
 const registerTime = document.getElementById("registerTime");
 let wtimes = JSON.parse(localStorage.getItem("wtimes")) || {};
 
+const alert = document.getElementById("alert");
+
 mon.value = wtimes.mon;
 tue.value = wtimes.tue;
 wed.value = wtimes.wed;
@@ -20,12 +22,17 @@ sun.value = wtimes.sun;
 
 
 
-
-registerTime.addEventListener("click",function(){
-    
+registerTime.addEventListener("click",function(){  
     wtimes = {};
     TimeSaving();  
+    alert.classList.remove('hidden');
+    alert.classList.add('popup-message');
 });
+
+alert.addEventListener('animationend',()=>{
+    alert.classList.remove('popup-message');
+    alert.classList.add('hidden');
+})
 
 function TimeSaving(){   
     wtimes.mon = mon.value;
