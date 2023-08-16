@@ -48,103 +48,34 @@ header nav{
   display: none;
 }
 
+/* infos部分 */
+.infos{
+  width: 100%;
+  height: 50px;
+  margin-top: 55px;
+  padding: auto 3.5%;
+  background-color: #5a69b1;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.infos ul{
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+.infos li{
+  margin: 0 0 0 40px;
+  font-size: 15px;
+}
+.infos img{
+  height: 15px;
+  width: auto;
+}
+
 
 /* 通常画面 */
-
-/* ：今日の時間関係 */
-.today-infos{
-  display: flex;
-  margin: 50px auto 40px;
-  width: 90%;
-  align-items: center;
-}
-
-.info{
-  margin: auto;
-
-}
-
-.info h3{
-  font-size:30px;
-  background-color: lightgreen;
-  height:45px;
-  text-align: center;
-}
-
-.info span{
-  width:80%;
-  color:#000;
-  align-items: center;    
-
-}
-
-.today-weather {
-padding: 10px 20px;
-color: #fff;
-width: 400px;
-height: 280px;
-background-color: #fff; 
-}
-
-.time-getup {
-  padding: 10px 20px;
-  color: #fff;
-  width: 200px;
-  height: 280px;
-  background-color: #fff;
-  text-align: center;
-  }
-  
-.time-train {
-  padding: 10px 20px;
-  color: #fff;
-  width: 200px;
-  height: 280px;
-  background-color: #fff;
-  text-align: center;
-  }
-
-.temp{
-  float:right;
-  padding-right:30px;
-}
-
-.today-weather img{
-  padding-left:30px;
-  height:100px;
-  width:auto;
-}
-
-.tempfont{
-  font-weight: bold;
-
-}
-.templow{
-  font-weight: bold; 
-  color:#0000FF;
-}
-
-.temphigh{
-  font-weight: bold;
-  color:#FF0000;
-
-}
-
-.time{
-font-size:60px;;
-position: relative;
-top:40px;
-}
-
-
-
-
-
-
-
-
-
-
 .content-box{
     margin-bottom: 1em;
     background: #fcfcfc;

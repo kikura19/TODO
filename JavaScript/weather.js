@@ -1,9 +1,9 @@
 // 天気データを取得する関数
 function getWeatherData() {
-    const weatherDiv = document.getElementById('weather');
-    const apiKey = 'c4d709cb0421492fb4815231231605';
-    const city = 'Tokyo';
-    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1`;
+  const weatherDiv = document.getElementById('weather');
+  const apiKey = 'c4d709cb0421492fb4815231231605';
+  const city = 'Tokyo';
+  const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1`;
     
     // 天気の画像と日本語表記のマッピング
   const weatherImages = {
@@ -45,22 +45,11 @@ function getWeatherData() {
         let weatherIconUrl = weatherImages[currentWeather];
         let weatherToday = weatherName[currentWeather];
         
-
-
-  
-        weatherDiv.innerHTML = `
-          <h2> ${weatherToday}</h2>
-          <img src="${weatherIconUrl}" alt="Weather Icon" class= "weather-icon">
-          <div class="temp">
-            <p>気温: <span class = "tempfont">${currentTemp}℃</span></p>
-            <p>最低気温: <span class = "templow">${minTemp}℃</span></p>
-            <p>最高気温: <span class = "temphigh">${maxTemp}℃</span></p>
-          </div>
-        `;
+        weatherDiv.innerHTML = `${weatherToday} <img src="${weatherIconUrl}" alt="" class= "weather-icon">(気温:${currentTemp}℃ 最高:${maxTemp}℃ 最低:${minTemp}℃ )`;
       })
       .catch(error => {
-        console.error('天気データの取得エラー:', error);
-        weatherDiv.innerText = '天気データの取得エラー';
+        console.error('取得エラー:', error);
+        weatherDiv.innerText = '取得エラー';
       });
   }
   

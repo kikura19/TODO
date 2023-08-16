@@ -40,7 +40,7 @@ function TimeSave(){
 }
 
 function displaySavedData(){
-    const trainTimeElement = document.getElementById("tomorrow-train-time");
+    const trainTimeElement = document.getElementById("train");
     const times = JSON.parse(localStorage.getItem("times"));
     
     // 明日の日付を取得します
@@ -53,12 +53,10 @@ function displaySavedData(){
     if (times && times[dayOfWeekString]){
         const trainTime = times[dayOfWeekString];
         trainTimeElement.textContent = `${trainTime}`;
-        document.getElementById('tomorrow-train-time').style.fontSize = '60px';
     }else{
-        const trainTime = '時刻が設定されていません';
+        const trainTime = '未設定';
         
         trainTimeElement.textContent = `${trainTime}`;
-        document.getElementById('tomorrow-train-time').style.fontSize = '16px';
     }
     
 }

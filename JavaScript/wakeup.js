@@ -59,13 +59,11 @@ function displayWakeup(){
     if (wtimes && wtimes[DayOfWeekString]){
         const wakeTime = wtimes[DayOfWeekString];
         wakeup.textContent = `${wakeTime}`;
-        document.getElementById('wakeup').style.fontSize = '60px';
     }else{
-        const wakeTime = '時刻が設定されていません';
+        const wakeTime = '未設定';
         
         wakeup.textContent = `${wakeTime}`;
-        document.getElementById('wakeup').style.fontSize = '16px';
-    }
+     }
     
     // 時刻を表示します
 
