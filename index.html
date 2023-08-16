@@ -11,15 +11,15 @@
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <h1>オールインワンTODO</h1>
-        </div>
-
-        <div class="header-right">
-            <!--今日の日付-->
-            <span id="date"></span>
-        </div>  
-  
+        <h1>
+            <a href="/">大学生のためのTODOリスト</a>
+        </h1>    
+        <nav class="nav-right">
+            <ul>
+                <li><a herf="#">SETTING</a></li>
+                <li><span id="date"></span></li>
+            </ul>           
+        </nav>
     </header>
 
     <div class="setting-lists">
@@ -87,7 +87,7 @@
         </div>
         <div class="submit">
             <a class="bt-todo regist" id="registerTime">登録</a> 
-            <p id="alert" class="hidden">時刻が更新されました！</p>
+            <p id="alert" class="none">時刻が更新されました！</p>
         </div>
        
         <div class="alarm">

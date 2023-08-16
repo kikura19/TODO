@@ -25,13 +25,13 @@ sun.value = wtimes.sun;
 registerTime.addEventListener("click",function(){  
     wtimes = {};
     TimeSaving();  
-    alert.classList.remove('hidden');
+    alert.classList.remove('none');
     alert.classList.add('popup-message');
 });
 
 alert.addEventListener('animationend',()=>{
     alert.classList.remove('popup-message');
-    alert.classList.add('hidden');
+    alert.classList.add('none');
 })
 
 function TimeSaving(){   
