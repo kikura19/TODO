@@ -79,24 +79,26 @@ function add(todo){
             wanto.remove();
             li.appendChild(check);
             li.appendChild(del);
-            li.classList.toggle("doing");
+            li.classList.add("doing");
             ultodo.appendChild(li);
             saveData();
         })
         if (todo&&todo.completed){//完了だったら完了済みへ
             li.appendChild(del);
             uldone.appendChild(li);
-            li.classList.toggle("done");
+            li.classList.add("done");
+            li.classList.add("todo-list"); 
         }else if (todo&&todo.incompleted){//未完了は未完了へ
             li.appendChild(check);
             ultodo.appendChild(li);
             li.appendChild(del);
-            li.classList.toggle("doing");
-            
+            li.classList.add("doing");
+            li.classList.add("todo-list"); 
         }else{//待機は待機中
             li.appendChild(wanto);
             li.appendChild(del);
-            ulcoming.appendChild(li);           
+            ulcoming.appendChild(li); 
+            li.classList.add("todo-list");          
         }
         input.value = "";
         deadlineInput.value = "";
@@ -113,7 +115,7 @@ function getDate() {
   }
 
 function saveData(){
-    const lists = document.querySelectorAll("li");
+    const lists = document.querySelectorAll(".todo-list");
     let todos = [];
     lists.forEach(list => {
         if (list.classList.contains("done")){
