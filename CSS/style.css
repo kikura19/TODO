@@ -9,6 +9,36 @@ body{
   background-color: rgb(252, 250, 241);
   font-family: 'Noto Serif JP', sans-serif;
 }
+.btn {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.8;
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+  color: #f0f0f0;
+  background-color: #186fe0;
+  border-bottom: 4px solid #1b09bb;
+}
+
+.btn:hover {
+  margin-top: 3px;
+  color: #f0f0f0;
+  background: #0aa5ff;
+  border-bottom: 1px solid #1b09bb;
+}
 
 
 /* ヘッダー部分 */
@@ -39,13 +69,13 @@ header ul{
 header li{
   margin: 0 0 0 15px;
   font-size: 14px;
+  
 }
 header nav{
   margin: 0 0 0 auto;
-}
-#tosetting{
   cursor: pointer;
 }
+
 
 .none{
   display: none;
@@ -68,11 +98,18 @@ header nav{
   list-style: none;
   margin: 0;
   display: flex;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
 }
 .infos li{
-  margin: 0 0 0 40px;
+  margin: 0;
+  height: 36px;
+  line-height: 36px;
   font-size: 15px;
+  padding: 0 30px 0 10px;
+  border-left: solid 1.5px #ffffff;
+  
 }
 .infos img{
   height: 15px;
@@ -95,7 +132,7 @@ header nav{
   font-size: 19px;
   cursor: pointer;
   padding: 7px 6px;
-  width: 70%;
+  width:70%;
   color: #666;
   user-select:none;
 }
@@ -109,8 +146,8 @@ header nav{
   user-select:none;
 }
 .register{
-  margin: auto;
   height: 36px;
+  font-size: 18px;
 }
 
 /* ::ボックス */
@@ -132,7 +169,7 @@ header nav{
   align-items: center;
   list-style-type: none;
 }
-  
+ 
 .todos li{
   color: #404040;
   border-left: solid 6px #1b09bb;/*左側の線*/
@@ -142,50 +179,51 @@ header nav{
   line-height: 1.5;
   padding: 0.5em;
   align-items: center;
+  align-items: center;
   list-style-type: none;/*ポチ消す*/
-  font-weight: bold; 
-}
-.todos span{
-  margin-left: auto;
+  font-weight: bold;
+  position: relative;
 }
 
 
-.bt-todo {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 0.8;
-  display: inline-block;
-  padding: 0.45rem 0.9rem;
-  margin: 0 0.2rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  border-radius: 0.5rem;
-  color: #f0f0f0;
-  background-color: #186fe0;
-  border-bottom: 4px solid #1b09bb;
+
+
+.wanto{
+  position: absolute;
+  top: 5px;
+  right: 80px;
 }
 
-.bt-todo:hover {
+.check{
+  position: absolute;
+  top: 5px;
+  right: 80px;
+}
+
+.del{
+  color: #000;
+  background: #98bbd2;
+  border-bottom: 4px solid #879faf;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.del:hover{
   margin-top: 3px;
   color: #f0f0f0;
-  background: #0aa5ff;
-  border-bottom: 1px solid #1b09bb;
+  background: #0c5680;
+  border-bottom: 1.3px solid #ffe48b;
 }
-
 
 
 /* 設定画面 */
 .settings{
   margin-top: 100px;
+}
+
+.settings h1{
+  text-align: center;
 }
 .time-setting{
   display: flex;

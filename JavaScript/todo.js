@@ -20,7 +20,7 @@ flatpickr(deadlineInput, {
     enableTime: false,
     dateFormat: "Y/m/d",
     minDate: "today"
-  });
+});
 
 if (todos){
     todos.forEach(todo=>{
@@ -34,31 +34,35 @@ form.addEventListener("submit", function(event){
 })
 
 register.addEventListener("click",function(){
-    add(register.value);
+    add();
 })
 
 function add(todo){
-    let todoText = input.value + " (締切日: " + deadlineInput.value + ")";
-
-    if (todo){
+    let todoText = "";
+    if(input.value&&deadlineInput.value){
+        todoText = input.value + " (期限: " + deadlineInput.value + ")";
+    }else if(input.value){
+        todoText = input.value
+    }else if(todo){
         todoText = todo.text;
     }
     if (todoText){
         const li = document.createElement("li");//タスクリストにつける
-        li.innerText = todoText;
+        const span = document.createElement("span");
+        span.innerText = todoText;
+        li.appendChild(span);
         
-
         const check = document.createElement('a');//完了ボタン
         check.classList.add('check');
-        check.classList.add('bt-todo');
+        check.classList.add('btn');
         check.innerHTML = '完了';
         const del = document.createElement('a');//削除ボタン
         del.classList.add('del');
-        del.classList.add('bt-todo');
+        del.classList.add('btn');
         del.innerHTML = '削除';
         const wanto = document.createElement('a');//開始ボタン
         wanto.classList.add('wanto');
-        wanto.classList.add('bt-todo');
+        wanto.classList.add('btn');
         wanto.innerHTML = '開始';
         del.addEventListener("click",function(){//削除押したら消す
             li.remove();
@@ -69,16 +73,18 @@ function add(todo){
             check.remove();
             del.remove()
             //締切日消す
-            li.innerHTML = li.innerHTML.substring(li.innerHTML.length-18,0);
-            li.appendChild(doneDate);
+            if(li.innerHTML.includes("(期限:")){
+                span.innerHTML = span.innerHTML.substring(span.innerHTML.length-17,0);
+            }
+            span.appendChild(doneDate);
             li.appendChild(del);
             uldone.appendChild(li);            
             saveData();
         })
         wanto.addEventListener("click",function(){//開始押したら、未完了に移る
             wanto.remove();
-            li.appendChild(check);
             li.appendChild(del);
+            li.appendChild(check);
             li.classList.add("doing");
             ultodo.appendChild(li);
             saveData();
@@ -89,14 +95,14 @@ function add(todo){
             li.classList.add("done");
             li.classList.add("todo-list"); 
         }else if (todo&&todo.incompleted){//未完了は未完了へ
-            li.appendChild(check);
-            ultodo.appendChild(li);
             li.appendChild(del);
+            li.appendChild(check);
+            ultodo.appendChild(li);           
             li.classList.add("doing");
             li.classList.add("todo-list"); 
         }else{//待機は待機中
-            li.appendChild(wanto);
             li.appendChild(del);
+            li.appendChild(wanto);            
             ulcoming.appendChild(li); 
             li.classList.add("todo-list");          
         }
