@@ -59,7 +59,7 @@ header h1{
 }
 header h1 a{
   text-decoration: none;
-  color:#ffffffdd;
+  color:#ffffff;
 }
 header ul{
   list-style: none;
@@ -68,7 +68,9 @@ header ul{
 }
 header li{
   margin: 0 0 0 15px;
+  padding-left: 10px;
   font-size: 14px;
+  border-left: 2px solid #ffffff ;
   
 }
 header nav{
@@ -108,8 +110,11 @@ header nav{
   line-height: 36px;
   font-size: 15px;
   padding: 0 30px 0 10px;
-  border-left: solid 1.5px #ffffff;
-  
+  border-left: solid 1.5px #ffffff; 
+}
+.infos a{
+  text-decoration: none;
+  color:#ffffff;
 }
 .infos img{
   height: 15px;
