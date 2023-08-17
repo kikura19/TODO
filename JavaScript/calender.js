@@ -17,6 +17,11 @@ window.onload = function(){
     theDate.innerHTML = y + "/" + (m + 1) + "/" + day + " (" + week[dayOfWeek] + ")";
 }
 
+theDate.addEventListener("click",function(){
+    showDate.setMonth(today.getMonth());
+    showProcess(showDate);
+})
+
 prev.addEventListener("click",function(){
     showDate.setMonth(showDate.getMonth() - 1);
     showProcess(showDate);
