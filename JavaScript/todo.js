@@ -20,7 +20,7 @@ flatpickr(deadlineInput, {
     enableTime: false,
     dateFormat: "Y/m/d",
     minDate: "today"
-  });
+});
 
 if (todos){
     todos.forEach(todo=>{
@@ -34,12 +34,14 @@ form.addEventListener("submit", function(event){
 })
 
 register.addEventListener("click",function(){
-    add(register.value);
+    add();
 })
 
 function add(todo){
-    let todoText = input.value + " (締切日: " + deadlineInput.value + ")";
-
+    let todoText = "";
+    if(input.value&&deadlineInput.value){
+        todoText = input.value + " (締切日: " + deadlineInput.value + ")";
+    }   
     if (todo){
         todoText = todo.text;
     }
@@ -47,7 +49,6 @@ function add(todo){
         const li = document.createElement("li");//タスクリストにつける
         li.innerText = todoText;
         
-
         const check = document.createElement('a');//完了ボタン
         check.classList.add('check');
         check.classList.add('bt-todo');
