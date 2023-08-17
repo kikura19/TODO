@@ -41,17 +41,20 @@
             </form>
             <div class="content-box">
                 <h2 class="task-title">未完了</h2>
-                <ul class=""  id="ultodo"></ul>
-                <!-- liはJavaScriptで作成するからここにはない -->
+                <ul class=""  id="ultodo">
+                    <li><span>未完タスク</span><a class="bt-todo del">削除</a><a class="bt-todo check">完了</a></li>
+                </ul>
             </div>
             <div class="content-box">
                 <h2 class="task-title">完了済</h2>
                 <ul class="" id="uldone">
+                    <li><span>完了済タスク</span><a class="bt-todo del">削除</a></li>
                 </ul>
             </div>
             <div class="content-box">
                 <h2 class="task-title">待機中</h2>
                 <ul class="" id="ulcoming">
+                    <li><span>待機タスク</span><a class="bt-todo del">削除</a><a class="bt-todo wanto">開始</a></li>
                 </ul>
             </div>
         </div>

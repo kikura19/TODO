@@ -140,7 +140,7 @@ header nav{
   align-items: center;
   list-style-type: none;
 }
-  
+ 
 .todos li{
   color: #404040;
   border-left: solid 6px #1b09bb;/*左側の線*/
@@ -150,11 +150,10 @@ header nav{
   line-height: 1.5;
   padding: 0.5em;
   align-items: center;
+  align-items: center;
   list-style-type: none;/*ポチ消す*/
-  font-weight: bold; 
-}
-.todos span{
-  margin-left: auto;
+  font-weight: bold;
+  position: relative;
 }
 
 
@@ -173,7 +172,7 @@ header nav{
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: center;
   text-decoration: none;
   letter-spacing: 0.1em;
   border-radius: 0.5rem;
@@ -189,6 +188,33 @@ header nav{
   border-bottom: 1px solid #1b09bb;
 }
 
+.wanto{
+  position: absolute;
+  top: 5px;
+  right: 80px;
+}
+
+.check{
+  position: absolute;
+  top: 5px;
+  right: 80px;
+}
+
+.del{
+  color: #000;
+  background: #98bbd2;
+  border-bottom: 4px solid #879faf;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.del:hover{
+  margin-top: 3px;
+  color: #f0f0f0;
+  background: #0c5680;
+  border-bottom: 1.3px solid #ffe48b;
+}
 
 
 /* 設定画面 */

@@ -48,7 +48,9 @@ function add(todo){
     }
     if (todoText){
         const li = document.createElement("li");//タスクリストにつける
-        li.innerText = todoText;
+        const span = document.createElement("span");
+        span.innerText = todoText;
+        li.appendChild(span);
         
         const check = document.createElement('a');//完了ボタン
         check.classList.add('check');
@@ -72,17 +74,17 @@ function add(todo){
             del.remove()
             //締切日消す
             if(li.innerHTML.includes("(期限:")){
-                li.innerHTML = li.innerHTML.substring(li.innerHTML.length-17,0);
+                span.innerHTML = span.innerHTML.substring(span.innerHTML.length-17,0);
             }
-            li.appendChild(doneDate);
+            span.appendChild(doneDate);
             li.appendChild(del);
             uldone.appendChild(li);            
             saveData();
         })
         wanto.addEventListener("click",function(){//開始押したら、未完了に移る
             wanto.remove();
-            li.appendChild(check);
             li.appendChild(del);
+            li.appendChild(check);
             li.classList.add("doing");
             ultodo.appendChild(li);
             saveData();
@@ -93,14 +95,14 @@ function add(todo){
             li.classList.add("done");
             li.classList.add("todo-list"); 
         }else if (todo&&todo.incompleted){//未完了は未完了へ
-            li.appendChild(check);
-            ultodo.appendChild(li);
             li.appendChild(del);
+            li.appendChild(check);
+            ultodo.appendChild(li);           
             li.classList.add("doing");
             li.classList.add("todo-list"); 
         }else{//待機は待機中
-            li.appendChild(wanto);
             li.appendChild(del);
+            li.appendChild(wanto);            
             ulcoming.appendChild(li); 
             li.classList.add("todo-list");          
         }
