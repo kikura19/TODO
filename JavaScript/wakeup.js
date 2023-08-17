@@ -10,6 +10,15 @@ let wtimes = JSON.parse(localStorage.getItem("wtimes")) || {};
 
 const alert = document.getElementById("alert");
 
+// mon.value = '07:00';
+// tue.value = '07:00';
+// wed.value = '07:00';
+// thu.value = '07:00';
+// fri.value = '07:00';
+// sat.value = '07:30';
+// sun.value = '07:30';
+
+
 mon.value = wtimes.mon;
 tue.value = wtimes.tue;
 wed.value = wtimes.wed;
@@ -17,9 +26,6 @@ thu.value = wtimes.thu;
 fri.value = wtimes.fri;
 sat.value = wtimes.sat;
 sun.value = wtimes.sun;
-
-
-
 
 
 registerTime.addEventListener("click",function(){  
