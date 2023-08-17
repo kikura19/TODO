@@ -40,9 +40,10 @@ register.addEventListener("click",function(){
 function add(todo){
     let todoText = "";
     if(input.value&&deadlineInput.value){
-        todoText = input.value + " (締切日: " + deadlineInput.value + ")";
-    }   
-    if (todo){
+        todoText = input.value + " (期限: " + deadlineInput.value + ")";
+    }else if(input.value){
+        todoText = input.value
+    }else if(todo){
         todoText = todo.text;
     }
     if (todoText){
@@ -70,7 +71,9 @@ function add(todo){
             check.remove();
             del.remove()
             //締切日消す
-            li.innerHTML = li.innerHTML.substring(li.innerHTML.length-18,0);
+            if(li.innerHTML.includes("(期限:")){
+                li.innerHTML = li.innerHTML.substring(li.innerHTML.length-17,0);
+            }
             li.appendChild(doneDate);
             li.appendChild(del);
             uldone.appendChild(li);            
