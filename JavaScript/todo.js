@@ -54,15 +54,15 @@ function add(todo){
         
         const check = document.createElement('a');//完了ボタン
         check.classList.add('check');
-        check.classList.add('bt-todo');
+        check.classList.add('btn');
         check.innerHTML = '完了';
         const del = document.createElement('a');//削除ボタン
         del.classList.add('del');
-        del.classList.add('bt-todo');
+        del.classList.add('btn');
         del.innerHTML = '削除';
         const wanto = document.createElement('a');//開始ボタン
         wanto.classList.add('wanto');
-        wanto.classList.add('bt-todo');
+        wanto.classList.add('btn');
         wanto.innerHTML = '開始';
         del.addEventListener("click",function(){//削除押したら消す
             li.remove();

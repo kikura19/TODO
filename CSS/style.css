@@ -9,6 +9,36 @@ body{
   background-color: rgb(252, 250, 241);
   font-family: 'Noto Serif JP', sans-serif;
 }
+.btn {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.8;
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+  color: #f0f0f0;
+  background-color: #186fe0;
+  border-bottom: 4px solid #1b09bb;
+}
+
+.btn:hover {
+  margin-top: 3px;
+  color: #f0f0f0;
+  background: #0aa5ff;
+  border-bottom: 1px solid #1b09bb;
+}
 
 
 /* ヘッダー部分 */
@@ -43,10 +73,9 @@ header li{
 }
 header nav{
   margin: 0 0 0 auto;
-}
-#tosetting{
   cursor: pointer;
 }
+
 
 .none{
   display: none;
@@ -103,7 +132,7 @@ header nav{
   font-size: 19px;
   cursor: pointer;
   padding: 7px 6px;
-  width: 70%;
+  width:70%;
   color: #666;
   user-select:none;
 }
@@ -117,8 +146,8 @@ header nav{
   user-select:none;
 }
 .register{
-  margin: auto;
   height: 36px;
+  font-size: 18px;
 }
 
 /* ::ボックス */
@@ -157,36 +186,7 @@ header nav{
 }
 
 
-.bt-todo {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 0.8;
-  display: inline-block;
-  padding: 0.45rem 0.9rem;
-  margin: 0 0.2rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  text-align: center;
-  vertical-align: center;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  border-radius: 0.5rem;
-  color: #f0f0f0;
-  background-color: #186fe0;
-  border-bottom: 4px solid #1b09bb;
-}
 
-.bt-todo:hover {
-  margin-top: 3px;
-  color: #f0f0f0;
-  background: #0aa5ff;
-  border-bottom: 1px solid #1b09bb;
-}
 
 .wanto{
   position: absolute;
@@ -220,6 +220,10 @@ header nav{
 /* 設定画面 */
 .settings{
   margin-top: 100px;
+}
+
+.settings h1{
+  text-align: center;
 }
 .time-setting{
   display: flex;

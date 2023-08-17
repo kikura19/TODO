@@ -36,31 +36,33 @@
             <h1 class="content">タスク管理</h1>
             <form id="form" class="input-box">
                 <input class="textbox" type="text" id="input" placeholder="TODOを入力" autocomplete="off">
+                <a class="btn register" id="register">登録</a>
                 <input class="deadline" type="text" id="deadlineInput" placeholder="期限を指定" autocomplete="off">
-                <a class="bt-todo register" id="register">登録</a>       
+                       
             </form>
             <div class="content-box">
                 <h2 class="task-title">未完了</h2>
                 <ul class=""  id="ultodo">
-                    <li><span>未完タスク</span><a class="bt-todo del">削除</a><a class="bt-todo check">完了</a></li>
+                    <li><span>未完タスク</span><a class="btn del">削除</a><a class="btn check">完了</a></li>
                 </ul>
             </div>
             <div class="content-box">
                 <h2 class="task-title">完了済</h2>
                 <ul class="" id="uldone">
-                    <li><span>完了済タスク</span><a class="bt-todo del">削除</a></li>
+                    <li><span>完了済タスク</span><a class="btn del">削除</a></li>
                 </ul>
             </div>
             <div class="content-box">
                 <h2 class="task-title">待機中</h2>
                 <ul class="" id="ulcoming">
-                    <li><span>待機タスク</span><a class="bt-todo del">削除</a><a class="bt-todo wanto">開始</a></li>
+                    <li><span>待機タスク</span><a class="btn del">削除</a><a class="btn wanto">開始</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="none" id="setting"> 
         <div class="settings">
+            <h1 class="content">設定画面</h1>
             <div class="time-setting">
                 <div class="times">
                     <p><h2>起床時間</h2></p>
@@ -86,7 +88,7 @@
             </div>     
             
             <div class="submit">
-                <a class="bt-todo" id="registerTime">登録</a> 
+                <a class="btn" id="registerTime">登録</a> 
                 <p id="alert" class="none">時刻が更新されました！</p>
             </div>
         </div>
