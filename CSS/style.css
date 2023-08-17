@@ -277,3 +277,58 @@ header nav{
     pointer-events: none;
   }
 }
+
+/* カレンダー */
+.calenders{
+  margin: 130px auto;  
+  color: #666;
+  width: 80%;
+}
+#y-m{
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0 0;
+  color: #000;
+}
+
+#calender{
+  margin: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+table{
+  outline: 2px solid #3e67b3;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+}
+th{
+  color: #000;
+  outline: 0.6px solid #717e8b;
+}
+td{
+  outline: 0.4px solid #acc1d7;
+  height: 100px;
+}
+
+td:first-child{
+  color: red;
+}
+td:last-child{
+  color: blue;
+}
+
+td.disabled{
+  color: #abb7bf;
+}
+td.today{
+  color: #fff;
+  background-color: #5a69b1;
+}
+
+#next-prev-btn{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}

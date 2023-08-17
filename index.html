@@ -18,7 +18,7 @@
             <ul>
                 <li><a herf="#" id="tohome">TODOs</a></li>
                 <li><a herf="#" id="tosetting">SETTING</a></li>
-                <li><span id="date"></span></li>
+                <li><a herf="#" id="tocalenders"><span id="date"></span></a></li>
             </ul>           
         </nav>
     </header>
@@ -94,15 +94,26 @@
         </div>
     
     </div>
+
+    <div class="calenders none" id="calenders">
+        <h1 id="y-m"></h1>
+
+        <div id="next-prev-btn">
+            <a class="btn" id="prev">前月</a>
+            <a class="btn" id="next">次月</a>
+        </div>
+
+        <div id="calender"></div>
+    </div>
     
     <div><!-- JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script src="JavaScript/todo.js"></script>
-        <script src="JavaScript/date.js"></script>
         <script src="JavaScript/weather.js"></script>
         <script src="JavaScript/wakeup.js"></script>
         <script src="JavaScript/change.js"></script>
         <script src="JavaScript/train.js"></script>
+        <script src="JavaScript/calender.js"></script>
     </div>
 </body>
 </html>
