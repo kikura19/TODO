@@ -19,8 +19,7 @@ sund.value = times.sund;
 
 
 
-registerTime2.addEventListener("click",function(){    
-    
+registerTime2.addEventListener("click",function(){   
     times = {};
     TimeSave();
 });
@@ -54,9 +53,7 @@ function displaySavedData(){
         const trainTime = times[dayOfWeekString];
         trainTimeElement.textContent = `${trainTime}`;
     }else{
-        const trainTime = '未設定';
-        
-        trainTimeElement.textContent = `${trainTime}`;
+        trainTimeElement.textContent = `未設定`;
     }
     
 }

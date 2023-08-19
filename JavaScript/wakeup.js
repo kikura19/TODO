@@ -66,9 +66,7 @@ function displayWakeup(){
         const wakeTime = wtimes[DayOfWeekString];
         wakeup.textContent = `${wakeTime}`;
     }else{
-        const wakeTime = '未設定';
-        
-        wakeup.textContent = `${wakeTime}`;
+        wakeup.textContent = `未設定`;
      }
     
     // 時刻を表示します
