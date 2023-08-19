@@ -111,6 +111,7 @@ header nav{
   font-size: 15px;
   padding: 0 30px 0 10px;
   border-left: solid 1.5px #ffffff; 
+  cursor: pointer;
 }
 .infos a{
   text-decoration: none;
