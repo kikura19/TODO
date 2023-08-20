@@ -70,12 +70,15 @@ header li{
   margin: 0 0 0 15px;
   padding-left: 10px;
   font-size: 14px;
-  border-left: 2px solid #ffffff ;
-  
+  border-left: 2px solid #ffffff ;  
 }
 header nav{
   margin: 0 0 0 auto;
   cursor: pointer;
+}
+header nav a{
+  text-decoration: none;
+  color: #fff;
 }
 
 

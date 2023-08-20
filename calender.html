@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京の大学生向けTODOリスト</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="/">東京の大学生向けTODOリスト</a>
+        </h1>    
+        <nav class="nav-right">
+            <ul>
+                <li><a href="/index.html">TODOs</a></li>
+                <li><a href="/setting.html">SETTING</a></li>
+                <li><a href="/calender.html"><span id="date"></span></a></li>
+            </ul>           
+        </nav>
+    </header>
+    <div class="infos">
+        <ul>
+            <li><a href="https://weather.yahoo.co.jp/weather/jp/13/4410/13101.html" target=”_blank”>[今日の天気] <span id="weather"></span></a></li>
+            <li>[翌日の起床] <span id="wakeup"></span></li>
+            <li>[翌日の電車] <span id="train"></span></li>              
+        </ul>
+    </div>
+
+    <div class="calenders" id="calenders">
+        <h1 id="y-m"></h1>
+
+        <div id="next-prev-btn">
+            <a class="btn" id="prev">前月</a>
+            <a class="btn" id="next">次月</a>
+        </div>
+
+        <div id="calender"></div>
+    </div>
+    
+    <div><!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="JavaScript/weather.js"></script>
+        <script src="JavaScript/wakeup.js"></script>
+        <script src="JavaScript/train.js"></script>
+        <script src="JavaScript/date.js"></script>
+        <script src="JavaScript/calender.js"></script>
+    </div>
+</body>
+</html>
