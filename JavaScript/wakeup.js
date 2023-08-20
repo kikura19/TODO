@@ -12,7 +12,8 @@ for (let day of week) {
 wakeup.innerHTML = displayWakeup();
 
 registerTime.addEventListener("click",function(){  
-    TimeSaving();  
+    TimeSaving(); 
+    displayWakeup(); 
     alertPop();
 });
 
@@ -26,14 +27,12 @@ function alertPop(){
     })
 }
 
-
 function TimeSaving(){ 
     for (let day of week) {
         const theDay = document.getElementById(day);
         wtimes[day] = theDay.value;
       }
     localStorage.setItem("wtimes",JSON.stringify(wtimes));
-    displayWakeup();
 };
 
 function displayWakeup(){  
