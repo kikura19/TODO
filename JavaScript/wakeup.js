@@ -4,11 +4,9 @@ const alert = document.getElementById("alert");
 const week = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const wtimes = JSON.parse(localStorage.getItem("wtimes")) || {};
 
-for (const day of week) {
+for (let day of week) {
   const theDay = document.getElementById(day);
-  if (theDay) {
-    theDay.value = wtimes[day];
-  }
+  theDay.value = wtimes[day];
 }
 
 wakeup.innerHTML = displayWakeup();
@@ -29,14 +27,11 @@ function alertPop(){
 }
 
 
-function TimeSaving(){   
-    wtimes.mon = mon.value;
-    wtimes.tue = tue.value;
-    wtimes.wed = wed.value;
-    wtimes.thu = thu.value;
-    wtimes.fri = fri.value;
-    wtimes.sat = sat.value;
-    wtimes.sun = sun.value;
+function TimeSaving(){ 
+    for (let day of week) {
+        const theDay = document.getElementById(day);
+        wtimes[day] = theDay.value;
+      }
     localStorage.setItem("wtimes",JSON.stringify(wtimes));
     displayWakeup();
 };
