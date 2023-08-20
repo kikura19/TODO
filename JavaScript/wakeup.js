@@ -27,7 +27,7 @@ function alertPop(){
     })
 }
 
-function TimeSaving(){ 
+function TimeSaving(){
     for (let day of week) {
         const theDay = document.getElementById(day);
         wtimes[day] = theDay.value;
