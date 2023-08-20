@@ -2,7 +2,6 @@ const YM = document.getElementById("y-m");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const calendar = document.getElementById("calender");
-const theDate = document.getElementById("date");
 const week = ["日", "月", "火", "水", "木", "金", "土"];
 const today = new Date();
 
@@ -10,12 +9,7 @@ let showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 
 window.onload = function(){
     showProcess(today, calendar);
-    let y = today.getFullYear();
-    let m = today.getMonth();
-    let day = today.getDate();
-    let dayOfWeek = today.getDay();
-    theDate.innerHTML = y + "/" + (m + 1) + "/" + day + " (" + week[dayOfWeek] + ")";
-}
+    }
 
 theDate.addEventListener("click",function(){
     showDate.setMonth(today.getMonth());
