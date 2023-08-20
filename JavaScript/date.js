@@ -1,12 +1,8 @@
-const date1 = document.getElementById("date1");
-const date2 = document.getElementById("date2");
-const date3 = document.getElementById("date3");
+const date = document.getElementById("date");
 const currentDay = new Date();
 const weekName = ["日", "月", "火", "水", "木", "金", "土"];
 
-date1.innerHTML = showToday();
-date2.innerHTML = showToday();
-date3.innerHTML = showToday();
+date.innerHTML = showToday();
 
 function showToday(){   
     let y = currentDay.getFullYear();
