@@ -127,7 +127,7 @@ function saveData(){
         if (list.classList.contains("done")){
             const listtext = list.innerText;
             let todo={
-                text:listtext.substring(listtext.length-2,0),
+                text:listtext.substring(listtext.length-3,0),
                 completed: list.classList.contains("done"),
                 
             }
@@ -135,7 +135,7 @@ function saveData(){
         }else if(list.classList.contains("doing")){
             const listtext = list.innerText;
             let todo={
-                text:listtext.substring(listtext.length-4,0),
+                text:listtext.substring(listtext.length-6,0),
                 completed: list.classList.contains("done"),
                 incompleted: list.classList.contains("doing")
             }
@@ -143,7 +143,7 @@ function saveData(){
         }else{
             const listtext = list.innerText;
             let todo={
-                text:listtext.substring(listtext.length-4,0),
+                text:listtext.substring(listtext.length-6,0),
                 completed: list.classList.contains("done"),
                 incompleted: list.classList.contains("doing")
             }
