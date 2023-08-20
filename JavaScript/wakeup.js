@@ -1,15 +1,16 @@
 const wakeup = document.getElementById("wakeup");
 const registerTime = document.getElementById("registerTime");
 const alert = document.getElementById("alert");
-const week = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+const weeks = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 const wtimes = JSON.parse(localStorage.getItem("wtimes")) || {};
 
-for (let day of week) {
+wakeup.innerHTML = displayWakeup();//for文の下にすると、うまく表示されない
+
+for (let day of weeks) {
   const theDay = document.getElementById(day);
   theDay.value = wtimes[day];
 }
 
-wakeup.innerHTML = displayWakeup();
 
 registerTime.addEventListener("click",function(){  
     TimeSaving(); 
@@ -28,20 +29,20 @@ function alertPop(){
 }
 
 function TimeSaving(){
-    for (let day of week) {
+    for (let day of weeks) {
         const theDay = document.getElementById(day);
         wtimes[day] = theDay.value;
       }
     localStorage.setItem("wtimes",JSON.stringify(wtimes)); 
 };
 
-function displayWakeup(){  
+function displayWakeup(){ 
     const theday = new Date();
     theday.setDate(theday.getDate() + 1);
-    const DayOfWeek = theday.getDay();  
-    const DayOfWeekString = week[DayOfWeek];
-    if (wtimes[DayOfWeekString]){
-        return `${wtimes[DayOfWeekString]}`;
+    const dayOfWeek = theday.getDay();  
+    const dayOfWeekString = weeks[dayOfWeek];
+    if (wtimes[dayOfWeekString]){
+        return `${wtimes[dayOfWeekString]}`;
     }else{
         return `未設定`;
     }    
