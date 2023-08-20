@@ -9,32 +9,32 @@ const today = new Date();
 let showDate = new Date(today.getFullYear(), today.getMonth(), 1);
 
 window.onload = function(){
-    showProcess(today, calendar);
+    showCalender(today, calendar);
 }
 
 theDate.addEventListener("click",function(){
     showDate.setMonth(today.getMonth());
-    showProcess(showDate);
+    showCalender(showDate);
 })
 
 prev.addEventListener("click",function(){
     showDate.setMonth(showDate.getMonth() - 1);
-    showProcess(showDate);
+    showCalender(showDate);
 })
 next.addEventListener("click",function(){
     showDate.setMonth(showDate.getMonth() + 1);
-    showProcess(showDate);
+    showCalender(showDate);
 })
 
-function showProcess(date){
+function showCalender(date){
     let year = date.getFullYear();
     let month = date.getMonth();
     YM.innerHTML = year + "年 " + (month + 1) + "月";
-    let calen = createProcess(year, month);
+    let calen = createCalender(year, month);
     calendar.innerHTML = calen;
 }
 
-function createProcess(year, month){
+function createCalender(year, month){
     let frame = "<table><tr class='dayOfWeek'>";
     for(i = 0; i < week.length; i++){
         frame += "<th>" + week[i] + "</th>";
@@ -49,7 +49,6 @@ function createProcess(year, month){
 
     for(i = 0; i < row; i++){
         frame += "<tr>";
-
         for(j = 0; j < week.length; j++){
             if (i == 0 && j < startDayOfWeek){
                 frame += "<td class='disabled'>" + (lastMonthEndDate - startDayOfWeek + j + 1) + "</td>"; 
