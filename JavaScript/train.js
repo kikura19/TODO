@@ -21,7 +21,6 @@ sund.value = times.sund;
 
 
 registerTime2.addEventListener("click",function(){   
-    times = {};
     TimeSave();
 });
 
