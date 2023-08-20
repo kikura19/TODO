@@ -1,6 +1,7 @@
 const YM = document.getElementById("y-m");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
+const theDate = document.getElementById("date3")
 const calendar = document.getElementById("calender");
 const week = ["日", "月", "火", "水", "木", "金", "土"];
 const today = new Date();

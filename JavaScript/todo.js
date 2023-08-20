@@ -8,10 +8,10 @@ const ulcoming = document.getElementById("ulcoming");//待機中
 const todos = JSON.parse(localStorage.getItem("todos"));
 
 const doneDate = document.createElement('span');
-var currentDate = new Date();
-var year = currentDate.getFullYear();
-var month = currentDate.getMonth() + 1;
-var day = currentDate.getDate();
+let currentDate = new Date();
+let year = currentDate.getFullYear();
+let month = currentDate.getMonth() + 1;
+let day = currentDate.getDate();
 doneDate.innerHTML = "(完了日: " + year + "/" + month + "/" + day + ")" ;
 
 
@@ -113,10 +113,10 @@ function add(todo){
 }
 
 function getDate() {
-    var currentDate = new Date();
-    var year = currentDate.getFullYear();
-    var month = currentDate.getMonth() + 1;
-    var day = currentDate.getDate();
+    let currentDate = new Date();
+    let year = currentDate.getFullYear();
+    let month = currentDate.getMonth() + 1;
+    let day = currentDate.getDate();
     doneDate = "(完了日: " + year + "/" + month + "/" + day + ")" ;
   }
 

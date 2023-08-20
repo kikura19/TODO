@@ -1,15 +1,18 @@
 const date1 = document.getElementById("date1");
 const date2 = document.getElementById("date2");
 const date3 = document.getElementById("date3");
+const currentDay = new Date();
+const weekName = ["日", "月", "火", "水", "木", "金", "土"];
 
-window.onload = function(){
-    const today = new Date();
-    const week = ["日", "月", "火", "水", "木", "金", "土"];
-    const y = today.getFullYear();
-    const m = today.getMonth();
-    const day = today.getDate();
-    const dayOfWeek = today.getDay();
-    date1.innerHTML = y + "/" + (m + 1) + "/" + day + " (" + week[dayOfWeek] + ")";
-    date2.innerHTML = y + "/" + (m + 1) + "/" + day + " (" + week[dayOfWeek] + ")";
-    date3.innerHTML = y + "/" + (m + 1) + "/" + day + " (" + week[dayOfWeek] + ")";
+date1.innerHTML = showToday();
+date2.innerHTML = showToday();
+date3.innerHTML = showToday();
+
+function showToday(){   
+    let y = currentDay.getFullYear();
+    let m = currentDay.getMonth();
+    let day = currentDay.getDate();
+    let dayOfWeek = currentDay.getDay();    
+    let date = y + "/" + (m + 1) + "/" + day + " (" + weekName[dayOfWeek] + ")";
+    return date;
 }
