@@ -6,10 +6,12 @@ const fri = document.getElementById("fri");
 const sat = document.getElementById("sat");
 const sun = document.getElementById("sun");
 const registerTime = document.getElementById("registerTime");
+const wakeup = document.getElementById("wakeup");
 let wtimes = JSON.parse(localStorage.getItem("wtimes")) || {};
 
 const alert = document.getElementById("alert");
 
+wakeup.innerHTML = displayWakeup();
 // mon.value = '07:00';
 // tue.value = '07:00';
 // wed.value = '07:00';
@@ -17,7 +19,6 @@ const alert = document.getElementById("alert");
 // fri.value = '07:00';
 // sat.value = '07:30';
 // sun.value = '07:30';
-
 
 mon.value = wtimes.mon;
 tue.value = wtimes.tue;
@@ -52,8 +53,7 @@ function TimeSaving(){
     displayWakeup();
 };
 
-function displayWakeup(){
-    const wakeup = document.getElementById("wakeup");
+function displayWakeup(){  
     const wtimes = JSON.parse(localStorage.getItem("wtimes"));
     // 明日の日付を取得します
     const theday = new Date();
@@ -64,17 +64,11 @@ function displayWakeup(){
     const DayOfWeekString = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'][DayOfWeek];
     if (wtimes && wtimes[DayOfWeekString]){
         const wakeTime = wtimes[DayOfWeekString];
-        wakeup.textContent = `${wakeTime}`;
+        return `${wakeTime}`;
     }else{
-        wakeup.textContent = `未設定`;
-     }
-    
-    // 時刻を表示します
-
-    
+        return `未設定`;
+    }    
 }
-
-window.addEventListener("DOMContentLoaded", displayWakeup);
 
 
 

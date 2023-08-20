@@ -1,4 +1,3 @@
-
 const mond = document.getElementById("mond");
 const tues = document.getElementById("tues");
 const wedn = document.getElementById("wedn");
@@ -7,7 +6,10 @@ const frid = document.getElementById("frid");
 const satu = document.getElementById("satu");
 const sund = document.getElementById("sund");
 const registerTime2 = document.getElementById("registerTime");
+const train = document.getElementById("train");
 let times = JSON.parse(localStorage.getItem("times")) || {};
+
+train.innerHTML = displayTrain();
 
 mond.value = times.mond;
 tues.value = times.tues;
@@ -18,7 +20,6 @@ satu.value = times.satu;
 sund.value = times.sund;
 
 
-
 registerTime2.addEventListener("click",function(){   
     times = {};
     TimeSave();
@@ -26,7 +27,6 @@ registerTime2.addEventListener("click",function(){
 
 
 function TimeSave(){
-
     times.mond = mond.value;
     times.tues = tues.value;
     times.wedn = wedn.value;
@@ -35,13 +35,11 @@ function TimeSave(){
     times.satu = satu.value;
     times.sund = sund.value;
     localStorage.setItem("times",JSON.stringify(times));
-    displaySavedData();
+    displayTrain();
 }
 
-function displaySavedData(){
-    const trainTimeElement = document.getElementById("train");
-    const times = JSON.parse(localStorage.getItem("times"));
-    
+function displayTrain(){   
+    const times = JSON.parse(localStorage.getItem("times"));   
     // 明日の日付を取得します
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -51,13 +49,12 @@ function displaySavedData(){
     const dayOfWeekString = ['sund', 'mond', 'tues', 'wedn', 'thur', 'frid', 'satu'][dayOfWeek];
     if (times && times[dayOfWeekString]){
         const trainTime = times[dayOfWeekString];
-        trainTimeElement.textContent = `${trainTime}`;
+        return `${trainTime}`;
     }else{
-        trainTimeElement.textContent = `未設定`;
+        return `未設定`;
     }
     
 }
 
-window.addEventListener("DOMContentLoaded", displaySavedData);
-    
+   
 
