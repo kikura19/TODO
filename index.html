@@ -25,12 +25,12 @@
     <div class="infos">
         <ul>
             <li><a href="https://weather.yahoo.co.jp/weather/jp/13/4410/13101.html" target=”_blank”>[今日の天気] <span id="weather"></span></a></li>
-            <li id="tosetting1">[翌日の起床] <span id="wakeup"></span></li>
-            <li id="tosetting2">[翌日の電車] <span id="train"></span></li>              
+            <li>[翌日の起床] <span id="wakeup"></span></li>
+            <li>[翌日の電車] <span id="train"></span></li>              
         </ul>
     </div>
 
-    <div class ="" id="home">
+    <div class="">
         <div class="todos">
             <h1 class="content">タスク管理</h1>
             <form id="form" class="input-box">
@@ -59,60 +59,14 @@
             </div>
         </div>
     </div>
-    <div class="none" id="setting"> 
-        <div class="settings">
-            <h1 class="content">設定画面</h1>
-            <div class="time-setting">
-                <div class="times">
-                    <p><h2>いつもの起床時間</h2></p>
-                    <p>月曜日<input type="time" id="mon"></p> 
-                    <p>火曜日<input type="time" id="tue"></p> 
-                    <p>水曜日<input type="time" id="wed"></p> 
-                    <p>木曜日<input type="time" id="thu"></p> 
-                    <p>金曜日<input type="time" id="fri"></p> 
-                    <p>土曜日<input type="time" id="sat"></p> 
-                    <p>日曜日<input type="time" id="sun"></p> 
-                </div>
-                
-                <div class="times">
-                    <p><h2>いつもの電車</h2></p>
-                    <p>月曜日<input type="time" id="mond"></p> 
-                    <p>火曜日<input type="time" id="tues"></p> 
-                    <p>水曜日<input type="time" id="wedn"></p> 
-                    <p>木曜日<input type="time" id="thur"></p> 
-                    <p>金曜日<input type="time" id="frid"></p> 
-                    <p>土曜日<input type="time" id="satu"></p> 
-                    <p>日曜日<input type="time" id="sund"></p>             
-                </div> 
-            </div>     
-            
-            <div class="submit">
-                <a class="btn" id="registerTime">登録</a> 
-                <p id="alert" class="none">時刻が更新されました！</p>
-            </div>
-        </div>
-    
-    </div>
 
-    <div class="calenders none" id="calenders">
-        <h1 id="y-m"></h1>
-
-        <div id="next-prev-btn">
-            <a class="btn" id="prev">前月</a>
-            <a class="btn" id="next">次月</a>
-        </div>
-
-        <div id="calender"></div>
-    </div>
-    
     <div><!-- JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="JavaScript/date.js"></script>
         <script src="JavaScript/todo.js"></script>
         <script src="JavaScript/weather.js"></script>
         <script src="JavaScript/wakeup.js"></script>
-        <script src="JavaScript/change.js"></script>
         <script src="JavaScript/train.js"></script>
-        <script src="JavaScript/calender.js"></script>
     </div>
 </body>
 </html>
