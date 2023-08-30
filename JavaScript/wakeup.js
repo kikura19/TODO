@@ -8,15 +8,18 @@ wakeup.innerHTML = displayWakeup();//for文の下にすると、うまく表示�
 
 for (let day of weeks) {
   const theDay = document.getElementById(day);
-  theDay.value = wtimes[day];
+  if(theDay){
+    theDay.value = wtimes[day];
+  }
 }
 
-
-registerTime.addEventListener("click",function(){  
-    TimeSaving(); 
-    alertPop();
-    wakeup.innerHTML = displayWakeup();
-});
+if(registerTime){
+    registerTime.addEventListener("click",function(){  
+        TimeSaving(); 
+        alertPop();
+        wakeup.innerHTML = displayWakeup();
+    });
+    }
 
 function alertPop(){
     alert.classList.remove('none');

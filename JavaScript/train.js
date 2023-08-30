@@ -7,13 +7,16 @@ train.innerHTML = displayTrain();//for文の下にすると、うまく表示さ
 
 for (let day of Weeks) {
   const theDay = document.getElementById(day);
-  theDay.value = times[day];
+  if(theDay){
+    theDay.value = times[day];
 }
-
-RegisterTime.addEventListener("click",function(){   
-    TimeSave();
-    train.innerHTML = displayTrain();
-});
+}
+if(RegisterTime){
+    RegisterTime.addEventListener("click",function(){   
+        TimeSave();
+        train.innerHTML = displayTrain();
+    });
+}
 
 function TimeSave(){
     for (let day of Weeks) {
